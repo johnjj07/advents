@@ -1,9 +1,12 @@
 import Data.Char (isDigit)
+import Day2.Cube (solveCube)
 
 main :: IO ()
 main = do
-  contents <- readFile "input/day1.txt"
-  print . findPairs . lines $ contents
+  solveCube
+  --contents <- readFile "input/day1.txt"
+  --print . findPairs . lines $ contents
+  --contents <- solveCube
 
 findPairs :: [String] -> Int
 findPairs strs =
