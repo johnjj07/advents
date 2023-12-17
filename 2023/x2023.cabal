@@ -26,7 +26,7 @@ version:            0.1.0.0
 extra-source-files: CHANGELOG.md
 
 library
-    exposed-modules:  Day2.Cube, Day2.GameParser
+    exposed-modules:  Day1.Day1, Day2.Cube, Day2.GameParser
 
     -- Modules included in this library but not exported.
     -- other-modules:

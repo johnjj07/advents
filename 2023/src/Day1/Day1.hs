@@ -1,14 +1,11 @@
+module Day1.Day1 (solveDay1) where
 import Data.Char (isDigit)
-import Day2.Cube (solveDay2)
-import Day1.Day1 (solveDay1)
 
-main :: IO ()
-main = do
-  solveDay1
-  solveDay2
-  --contents <- readFile "input/day1.txt"
-  --print . findPairs . lines $ contents
-  --contents <- solveCube
+solveDay1 :: IO ()
+solveDay1 = do
+  contents <- readFile "src/Day1/day1.txt"
+  print $ "Day 1 Part 2: " ++ show (findPairs . lines $ contents)
+
 
 findPairs :: [String] -> Int
 findPairs strs =
@@ -35,4 +32,4 @@ findMatches str numbers
   | isDigit h = findMatches t (numbers ++ [h])
   | otherwise = findMatches t numbers
   where (h:t) = str
-  
+
